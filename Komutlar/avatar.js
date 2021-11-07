@@ -25,7 +25,7 @@ module.exports = {
     description: '👤 You\' ll see your avatar or someone else \'s avatar.',
 
     run: async (client, interaction) => {
-let dil = db.fetch(`dil_${interaction.user.id}`) 
+
    const u = interaction.options.getUser('user');
 
 let kullanıcı = u || interaction.user
@@ -42,7 +42,6 @@ const row = new MessageActionRow()
 
 ); 
 
-if(!dil) {
 
 const embed = new Discord.MessageEmbed() 
 
@@ -53,22 +52,6 @@ const embed = new Discord.MessageEmbed()
 .setImage(kullanıcı.avatarURL({ dynamic: true, size: 2048 })) 
 
 interaction.reply({embeds: [embed], components: [row], ephemeral: true}) 
-
-} 
-
-if(dil === "TR") {
-
-const embed = new Discord.MessageEmbed() 
-
-.setTitle("*Muhteşem avatar 2000*") 
-
-.setColor('#0099ff') 
-
-.setImage(kullanıcı.avatarURL({ dynamic: true, size: 2048 })) 
-
-interaction.reply({embeds: [embed], components: [row], ephemeral: true}) 
-
-} 
 
 } 
 
