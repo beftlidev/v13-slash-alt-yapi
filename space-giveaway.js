@@ -301,8 +301,7 @@ client.on("messageCreate", message => {
   if (message.channel.type === "dm") return;
 });
 
-client.login("NzY1MjA3MjY4NDA4MDMzMzIy.X4RczQ.DToLR138QTuGpXX6z0YGTZfPIr0");
-
+client.login(process.env.TOKEN) 
 client.on("messageCreate", async(m) => {
 if (!m.guild) return;
 
