@@ -1,0 +1,1 @@
+Burası botunun handler kısmı.
