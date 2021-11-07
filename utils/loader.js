@@ -10,7 +10,7 @@ module.exports = (client, interaction) => {
   
 
   var files = readdirSync("./Komutlar")
-var event = readdirSync("./events")
+
   var props;
 
   
